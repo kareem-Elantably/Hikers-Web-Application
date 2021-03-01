@@ -59,68 +59,13 @@
 	</style>
 </head>
 <body style="background-color:grey;" class="header">
-<section>
-           
-                <div class="row">
-                   <div class="navbar navbar-default">
-                      <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                            <div class="navlogo col-lg-2">
-                                <a class="navbar-brand" href="home.php">HIKERS</a>
-                            </div>
-                          
-                        </div>
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                          
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <div class="col-lg-8">
-                                      <ul class="nav navbar-nav nav-links">
-                                      <?php
-                    
-                                        if(isset($_SESSION['ID'])) 
-                                         {                 
-                                        echo'        <li><a href="http://localhost/hikers/login/profile.php?prof=0">Profile</a></li>';
-                                         }?>  
-                                        <li><a href="groups.php">Groups</a></li>
-                                        <li><a href="productPage.php">Shop</a></li>
-
-                                      </ul>
-                                     
-                                      <ul class="nav navbar-nav navbar-right">
                      <?php
-                    try{
-                    if(isset($_SESSION['ID'])) 
-                    {
-                      include("chaticon.php");
-                      echo'
-                     
-                      <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-                      <li><a href="login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
-                      <li><a href="myGroups.php"> My Groups</a></li>
-                      <li><a href="myTrips.php"> My Trips</a></li>
-                        ';
-                      
-                    }
-                    else
-                    {
-                    echo'       
-                    <li><a href="login/registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="login/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
-                    }
-                  }catch(exception $e){
-
-  echo'Message: an error has occured';
-  
-
-}
+					 
+					 include("nav-bar.php");
+					 
+					 
+                    
                     ?>
     </ul>
                                     </div>

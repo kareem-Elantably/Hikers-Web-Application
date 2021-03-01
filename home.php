@@ -13,10 +13,12 @@
     <link href="layout/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="layout/owl-carousel/owl.theme.css" rel="stylesheet">
 	
+ <link rel="stylesheet" href="layout/css/nav-bar.css">
+	
 	<style>
 .header{
   
-background: url(../layout/photos/hikers.jpg) ;
+background: url(layout/photos/hikers.jpg) ;
   margin-left: 0px;
 }
 
@@ -25,11 +27,11 @@ background-color:grey;}
 </style>
 </head>
 
-<body class="index-page">
-	<section class="main-header">
-		
-		
-		<?php include("nav-bar.php"); ?>  
+<body class="index-page" class="main-header">
+
+<section class="header">
+			<?php include("nav-bar.php"); ?>  
+	
 	
 </section>
 	

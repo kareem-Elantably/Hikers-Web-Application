@@ -28,50 +28,7 @@
 <body style="background-color:grey;" class="header";>
 
            
-                <div class="row">
-                   <div class="navbar navbar-default">
-                      <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                            <div class="navlogo col-lg-2">
-                                <a class="navbar-brand" href="home.php">HIKERS</a>
-                            </div>
-                          
-                        </div>
-
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                          
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <div class="col-lg-8">
-                                      <ul class="nav navbar-nav nav-links">
-                                         
-                                      <li><a href="http://localhost/hikers/auditor/auditorHis.php?userID=<?php echo''.$ID.'';?>">Messages </a></li>
-                                        <li><a href="http://localhost/hikers/auditor/investigationS.php?userID=<?php echo''.$ID.'';?>">Investigation Requests</a></li>
-                                        <li><a href="formView.php">Form view</a></li>
-
-                                      </ul>
-                                     
-                                      <ul class="nav navbar-nav navbar-right">
-                     
-    </ul>
-                                    </div>
-                                    
-                               
-                              
-                            </div>
-                         
-  </div>
-               </div>
-                 </div>
-             
-                
-            </div>
+              <?php include("../nav-bar.php");  ?>
 <form class="form" action="" method="POST" autocomplete="off" >
 <div class="container">
 
