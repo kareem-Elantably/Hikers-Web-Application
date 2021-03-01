@@ -1,0 +1,97 @@
+
+
+.main-header{background: url(../../layout/photos/hikers.jpg) center center;background-size: cover;background-repeat: no-repeat; min-height:640px; }
+
+
+
+/* ---------------------------------------------------------------------------- */
+/* -------------------------------------Content-------------------------------- */
+/* ---------------------------------------------------------------------------- */
+#page-content{}
+
+/* ---HomePage--- */
+.box-content {padding: 90px 0;}
+.heading{position: relative;display: block;text-transform: uppercase;margin-bottom: 70px;text-align: center;z-index: 3;}
+.heading .sub{font-size: 15px;letter-spacing: 2px;color: #C4A648;}
+.heading .title{font-size: 48px;color: #1a1c1e;}
+.box-content.box-style-1{background:  rgba(0, 0, 0, 0.7);;}
+.box-content.box-style-2{background:grey}
+.box-content.box-style-3{background:  rgba(0, 0, 0, 0.7);}
+
+}
+/* -------------------------------------Box 1---------------------------------- */
+.box-content.box-1 {text-align: center;padding: 90px 0 0;}
+.box-content.box-1 .box-item h3{color: #1a1c1e; font-size: 23px;}
+.wrap-icon{background: #F0F3F6;padding-top: 17px;width: 150px;height: 150px;border-radius: 50%;margin:auto;}
+
+
+/* -------------------------------------Box 2---------------------------------- */
+.box-content.box-2 {padding: 90px 0 150px}
+.box-content.box-2 .item{padding: 0 15px;}
+/* -------------------------------------Box 3---------------------------------- */
+.box-content.box-3 {padding: 70px 0;text-align: center;background:  rgba(0, 0, 0, 0.7);}
+
+/* ---------------------------------------------------------------------------- */
+/* -----------------------------Portfolio Box---------------------------------- */
+/* ---------------------------------------------------------------------------- */
+.portfolio-box {display: block;position: relative;margin: 0 auto 30px;}
+.portfolio-box .portfolio-box-caption {display: block;position: absolute;bottom: 0;text-align: center;width:100%; height:100%;color: #fff;opacity: 0;background: rgba(0, 0, 0, .6);-webkit-transition: all .35s;-moz-transition: all .35s;transition: all .35s;}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {position: absolute;top: 50%;width: 100%;text-align: center;transform: translateY(-50%);}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-social a{height: 50px;width: 50px;border-radius: 50%;color: #fff;background: #36AEEA;display: block;font-size: 22px;padding-top: 15px;}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-social i.fa{}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {padding: 0 15px;}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {text-transform: uppercase;font-weight: 600;margin-top: 10px;}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {font-size: 18px;}
+.portfolio-box:hover .portfolio-box-caption {opacity: 1;}
+
+
+/* ---------------------------------------------------------------------------- */
+/* --------------------------------Entry-box----------------------------------- */
+/* ---------------------------------------------------------------------------- */
+.box-entry { margin-bottom: 30px;position:relative;max-width:100%;display:block;clear: both;z-index: 1;}
+.box-entry.home-post{color: #fff;min-height: 400px;}
+.box-entry.archive-post{background-color: #F7F7F7;}
+.box-entry:before{}
+.box-entry.home-post:after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background: rgba(45, 50, 56,0.55)}
+
+.box-entry .box-entry-inner{position: relative;z-index: 1;}
+.box-entry img{border: none; width: 100%;}
+.box-entry .entry-details{}
+.box-entry .entry-rating{padding: 20px;}
+.box-entry .entry-bottom {margin-top: 20px;}
+.box-entry.home-post .entry-des {padding: 80px 20px;}
+.box-entry.archive-post .entry-des {padding: 0 20px 20px;}
+.box-entry .entry-des h3{margin: 20px 0 0;font-size: 33px;font-weight: 500;}
+.box-entry .entry-des span{margin-bottom: 20px; display:block;}
+.box-entry .entry-des ul.fancy-list{padding: 0;}
+.box-entry .entry-des ul.fancy-list li{display: block;line-height: 28px;padding-left: 20px;position: relative;margin: 5px 0;}
+.box-entry .entry-des ul.fancy-list li::before {color: #fff;content: "";font-family: FontAwesome;font-size: 14px;left: 0;position: absolute;top: 0;}
+.box-entry .entry-bottom {}
+.pro-price-content{padding: 20px;font-size: 20px;font-weight: 500;margin-bottom: 0;line-height: 26px;position:relative;overflow: hidden;}
+.pro-price-content:after{content: '';position: absolute;width: 100%;height: 100%;left: 0;top: 0;z-index: -1;-webkit-filter: blur(20px);filter: blur(20px);}
+
+
+.pro-price-content .price {
+    display: inline-block;
+    float: right;
+	font-weight:bold;
+    font-size: 29px;
+}
+
+@media only screen and (max-width: 767px) {.box-entry{text-align: center;}}
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------Hexagon------------------------------------ */
+/* ---------------------------------------------------------------------------- */
+.hexagon {position: relative;width: 100px; height: 57.74px;background-color: #ffffff;margin: 28.87px auto;box-shadow: 0 0 15px rgba(0,0,0,0.4);}
+.hexagon .hexagon-inner {display: block;position: absolute;bottom: 0;width: 100%;height: 100%;text-align: center;z-index: 999;}
+.hexagon .hexagon-inner .hexagon-inner-content {position: absolute;top: 50%;width: 100%;text-align: center;transform: translateY(-50%);}
+
+.hexagon:before,
+.hexagon:after {content: "";position: absolute;z-index: 1;width: 70.71px;height: 70.71px;-webkit-transform: scaleY(0.5774) rotate(-45deg);-ms-transform: scaleY(0.5774) rotate(-45deg);transform: scaleY(0.5774) rotate(-45deg);background-color: inherit;left: 14.6447px;box-shadow: 0 0 15px rgba(0,0,0,0.4);}
+
+.hexagon:before {top: -35.3553px;}
+
+.hexagon:after {bottom: -35.3553px;}
+

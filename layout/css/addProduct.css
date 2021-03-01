@@ -1,0 +1,156 @@
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
+  	  .new-btn {
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: grey;
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+	  }
+	  .new-btn:hover {
+	background-color: black;
+  opacity: 0.7;
+
+}
+.contactus {
+  width: 70%;
+  padding: 30px 0;
+  background: rgba(0, 0, 0, .3);
+  transition: .2s;
+  h2 {
+    font-weight: 300;
+  }
+}
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+.header{
+    background: none;
+  background-color:grey;
+margin-left:50px;
+}
+
+.column {
+	
+
+
+  padding: 8px;
+  color:white;
+  border-color:white;
+  border: solid;
+
+}
+
+
+
+
+.container {
+  padding: 16px;
+  text-align:center;
+   width: 100%;
+  
+}
+
+.container::after, .row::after {
+	
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.input{
+	 border: solid;
+  background-color:transparent !important;
+	border-color:white;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+    padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  width: 37.5%;
+}
+
+
+.button {
+  border: solid;
+  background-color:transparent !important;
+	border-color:white;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+    padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  width: 37.5%;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+
+.himg 
+        {
+            padding: 25px;
+            padding-top: 10px;
+            width:250px;
+            height:200px;
+            border-radius: 50%;
+            
+
+        }
+	
+		
+		
+		h1{
+    position:relative;
+    left:600px;
+    color:white;
+}
+h4{
+  position:relative;
+  left: 1350px;
+  color: white;
+  bottom: 200px;
+}
+h5{
+  position:relative;
+  left: 1360px;
+  color: white;
+  bottom: 150px;
+}
+
+option
+{
+	color:white;
+}
+		
+		
+		h2{
+ 
+    color:white;
+}
+
+label
+{
+	color:white;
+}
+		

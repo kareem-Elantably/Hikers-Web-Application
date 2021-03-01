@@ -1,0 +1,86 @@
+	  .new-btn {
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: grey;
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+
+}
+.new-btn:hover {
+	background-color: black;
+  opacity: 0.7;
+
+}  
+
+.page-width {
+	 margin:150px;
+	background-color:transparent !important;
+	border-color:white;
+	background-image:none;
+	box-shadow:none;	
+	font-size: 25px;
+    font-weight: normal;
+    color: white;
+	
+}
+
+
+
+
+
+
+
+
+.header{
+    background: url("../photos/hikers.jpg") center center fixed;
+    color: #FFF;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -msn-background-size: cover;
+}
+.header .overlay{
+    background: rgba(0, 0, 0, 0.58);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+
+.header .navbar-default {
+	background-color:transparent !important;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;	
+}
+.header .navbar-default .navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.header .navbar-default .navbar-nav>li>a {
+   font-size:20px; 
+   color:#fff; 
+    border-bottom: 1px solid transparent
+}
+.header .navbar-default .navbar-nav>li:hover a{
+    color: #333;
+     border-bottom: 1px solid #FFF
+}
+
+
+.header .navbar-toggle {
+      margin:10px 0; 
+      background:#36C; 
+      color:#FFF;
+}
+

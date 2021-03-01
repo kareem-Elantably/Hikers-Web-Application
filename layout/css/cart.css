@@ -1,0 +1,124 @@
+
+
+.column {
+	
+  float:left;
+  width: 15%;
+
+  padding: 8px;
+  color:white;
+  border-color:white;
+  border: solid;
+
+}
+
+
+
+.card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 16px;
+  text-align:center;
+   width: 100%;
+  
+}
+
+.container::after, .row::after {
+	
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+.button {
+  border: solid;
+  background-color:transparent !important;
+	border-color:white;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+    padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+
+.himg 
+        {
+            padding: 25px;
+            padding-top: 10px;
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            
+
+        }
+		
+		.row{
+			color:white;
+			text-align: center;
+		}
+		
+		
+		
+		h1{
+    position:relative;
+    left:600px;
+    color:black;
+}
+
+		h2{
+    position:relative;
+     font-size: 15px;
+		color:white;
+		}
+h4{
+  position:relative;
+  left: 1350px;
+  color: black;
+  bottom: 200px;
+}
+h5{
+  position:relative;
+  left: 1360px;
+  color: black;
+  bottom: 150px;
+}
+	
+.rate
+{
+	color:black;
+}
+	 .new-btn {
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: grey;
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+ 
+}
+.new-btn:hover {
+	background-color: black;
+  opacity: 0.7;
+
+}
+.header{
+    background: none;
+  background-color:grey;
+
+}
+	
