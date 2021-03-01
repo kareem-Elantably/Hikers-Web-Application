@@ -59,7 +59,7 @@
                                      
                                       <ul class="nav navbar-nav navbar-right">
                      <?php
-                    
+                  
                     if(isset($_SESSION['ID'])) 
                     {
                      
@@ -94,10 +94,11 @@
 			
 			
         
- <?php require('login/db.php');?>
+ 
 
 <?php
- 
+try{
+  require('login/db.php');
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -173,7 +174,12 @@ $result= mysqli_query($conn,$sql);
         
               echo"</form>";
               
-              
+          }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}    
         ?>
 
   

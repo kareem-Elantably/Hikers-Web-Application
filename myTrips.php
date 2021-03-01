@@ -96,7 +96,7 @@
         
 
 
-            <?php require('login/db.php');?>
+          
 
 
 <div class="row">
@@ -105,8 +105,8 @@
 
 <form action="" method="post">
  <?php
-
-  
+try{
+     require('login/db.php');
 
 $sql="SELECT * FROM `trip-user` where userID='".$_SESSION["ID"]."'";
 $result= mysqli_query($conn,$sql);
@@ -160,7 +160,12 @@ $result= mysqli_query($conn,$sql);
             </script>';}
         
               echo"</form>";
-              
+              }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
               
         ?>
 

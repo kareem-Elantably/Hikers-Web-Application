@@ -155,7 +155,7 @@
 
  <?php
 
-  
+  try{
 
   $sql = "Select * from groups";
   $result = $conn->query($sql);
@@ -231,7 +231,13 @@ if(!$result){
       echo "<center><h2>No groups yet</h2></center>";
   }
   
-  //$conn->close();
+  $conn->close();
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
   ?>
 
   </form>

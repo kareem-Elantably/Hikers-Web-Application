@@ -127,13 +127,18 @@
 $pID= $_GET['productID'];
 
 
-
+try{
 
 $sql= "Select * from products WHERE ID = '$pID' ";
 $result = mysqli_query($conn,$sql);
 $check = mysqli_fetch_array($result);
 
+}catch(exception $e){
 
+  echo'Message: an error has occured';
+  
+
+}
 
 if(isset($check))
                   {   

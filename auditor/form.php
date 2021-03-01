@@ -72,17 +72,163 @@
              
                 
             </div>
-            <?php
-            
-            $sql="select * from surveytable";
-$result= mysqli_query($conn,$sql);
-            $r=mysqli_fetch_array();
-            
-            
-            ?>
 <form class="form" action="" method="POST" autocomplete="off" >
 <div class="container">
 
+<h3>Write your username</h3>
+<div class="row">
+                    <div class="col-md-20 col-sm-20 col-xs-12">
+                        	<div class="input-group-prepend" style="margin-bottom: 25px;">
+		 <div class="input-group form-group">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" name="username" placeholder="username" autofocus="false">
+						
+					</div>
+                    </div>
+                </div>
+
+<div class="container emp-profile">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <div class="card ">
+            <div class="card-header">Survey form</div>
+            <div class="card-block">
+               <br>
+
+                Did you like the hiking spots ?
+                <br />
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio1" autocomplete="off" value="NO" />No
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio1" autocomplete="off"  value="not bad"/>Not Bad
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio1" autocomplete="off" value="Nice"/>Nice
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio1" autocomplete="off" value="perfect"/>Perfect
+                    </label>
+                </div>
+                <br />
+                <br />
+
+                Did you like the Accomodation ?
+                <br />
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio2" autocomplete="off" value="NO" />No
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio2" autocomplete="off"  value="not bad"/>Not Bad
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio2" autocomplete="off" value="Nice"/>Nice
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio2" autocomplete="off" value="perfect"/>Perfect
+                    </label>
+                </div>
+                <br />
+                <br />
+
+                Did you like the stuff ?
+                <br />
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio3" autocomplete="off"  value="NO" />No
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio3" autocomplete="off"  value="not bad"/>Not Bad
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio3" autocomplete="off" value="Nice"/>Nice
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio3" autocomplete="off" value="perfect"/>Perfect
+                    </label>
+                </div>
+                <br />
+                <br />
+
+                Did you like the Transportations ?
+                <br />
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio4" autocomplete="off" value="NO" />No
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio4" autocomplete="off"  value="not bad"/>Not Bad
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio4" autocomplete="off" value="Nice"/>Nice
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio4" autocomplete="off" value="perfect"/>Perfect
+                    </label>
+                </div>
+                <br />
+                <br />
+
+                Did you like the Services ?
+                <br />
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio5" autocomplete="off" value="NO" />No
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio5" autocomplete="off"  value="not bad"/>Not Bad
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio5" autocomplete="off" value="Nice"/>Nice
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio5" autocomplete="off" value="perfect"/>Perfect
+                    </label>
+                </div>
+                <br />
+                <br />
+
+                Did you like the Products ?
+                <br />
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio6" autocomplete="off" value="NO" />No
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio6" autocomplete="off"  value="not bad"/>Not Bad
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio6" autocomplete="off" value="Nice"/>Nice
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio6" autocomplete="off" value="perfect"/>Perfect
+                    </label>
+                </div>
+                <br />
+                <br />
+
+                Did you like the Materials used ?
+                <br />
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio7" autocomplete="off" value="NO" />No
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio7" autocomplete="off" value="not bad"/>Not Bad
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio7" autocomplete="off" value="Nice" />Nice
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="radio7" autocomplete="off" value="perfect" />Perfect
+                    </label>
+                </div>
+                <br />
+                <br />
 
                 Did you like the Prices ?
                 <br />

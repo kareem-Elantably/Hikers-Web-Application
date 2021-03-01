@@ -214,7 +214,7 @@ p.link  {
 	 $password = $_POST['password'];
 	 $username = $_POST['username'];
 	 $Age = $_POST['age'];
-
+try{
    if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 
@@ -240,9 +240,17 @@ p.link  {
  else {
 
     echo("E-mail is not valid");
-       
+     
+
+}
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
 }
 }
+
 ?>
 
 <!-- include Google hosted jQuery Library -->

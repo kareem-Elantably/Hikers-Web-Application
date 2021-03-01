@@ -117,6 +117,7 @@
     <div class="info">
    <div id="history">
      <?php
+     try{
    $sql="select * from messages where hikerID='$ID' ORDER BY time DESc; ";
 $r= mysqli_query($conn,$sql);
 if ($r->num_rows > 0) 
@@ -143,7 +144,12 @@ else{
   }
 
 }else{echo'How can we help you';}
+}catch(exception $e){
 
+  echo'Message: an error has occured';
+  
+
+}
 ?>
 </div>
 </div>
@@ -176,6 +182,7 @@ else{
 
 
 <?php 
+try{
     require('login/db.php');
     
     
@@ -199,7 +206,12 @@ else{
            </script>';
      
        mysqli_close($conn);
-    
+    }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
     
     }
     

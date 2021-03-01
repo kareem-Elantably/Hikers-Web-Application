@@ -190,13 +190,13 @@ p.link  {
 
 <!-- Start jQuery code -->
 <script type="text/javascript">
-$(document).ready(function() {/////?
+$(document).ready(function() {
     $("#Login").click(function() { 
 
         var proceed = true;
         //simple validation at client's end
         //loop through each field and we simply change border color to red for invalid fields       
-        $("#contact_form input[required=true]").each(function(){
+        $("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
             $(this).css('border-color','green'); 
             if(!$.trim($(this).val())){ //if this field is empty 
                 $(this).css('border-color','red'); //change border color to red 

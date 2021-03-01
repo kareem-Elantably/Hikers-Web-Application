@@ -35,7 +35,9 @@
 <body class="header" style="background: -webkit-linear-gradient(right, #fff,grey );">
 
 
-  <?php require('db.php');?>
+  <?php
+try{
+   require('db.php');?>
 
   <?php
 if(isset($_SESSION['ID']))
@@ -99,7 +101,12 @@ $sql= "Select * from users WHERE ID ='$p'  ";
 $result = mysqli_query($conn,$sql);
 $check = mysqli_fetch_array($result);
 
+}catch(exception $e){
 
+  echo'Message: an error has occured';
+  
+
+}
 ?> 
            
                 <div class="row">

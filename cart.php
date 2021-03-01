@@ -90,9 +90,17 @@
 
 <div class="row">
 <form action="" method="post">
-   <?php require('login/db.php');?>
+   <?php 
+
+try{
+   require('login/db.php');?>
 <?php
 
+$conn = new mysqli('localhost' , 'root' , '' , 'hikers project');
+if(!$conn)
+{
+    die("Connection failed".mysqli_connect_error());
+}
 $sql="select * from cart where userID='".$_SESSION["ID"]."'";
 $result= mysqli_query($conn,$sql);
 
@@ -152,6 +160,12 @@ else {echo '
   ';}
 
       echo"</form>";
+    }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
       
       
 ?>

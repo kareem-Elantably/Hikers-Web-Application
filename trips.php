@@ -96,7 +96,7 @@
                                      
                                       <ul class="nav navbar-nav navbar-right">
                      <?php
-                    
+                    try{
                     if(isset($_SESSION['ID'])) 
                     {
                       include("chaticon.php");
@@ -115,6 +115,12 @@
                     <li><a href="login/registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="login/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
                     }
+                  }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
                     ?>
     </ul>
                                     </div>
@@ -151,7 +157,7 @@
 
  <?php
 
-  
+  try{
 
   $sql = "Select * from trips";
   $result = $conn->query($sql);
@@ -229,6 +235,12 @@ if(!$result){
   else {
       echo "<center><h2>No trips yet</h2></center>";
   }
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
   
   ?>
 

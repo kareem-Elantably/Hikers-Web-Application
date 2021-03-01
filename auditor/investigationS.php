@@ -93,8 +93,7 @@ h3, p, h1, h2, b
                                          <?php $ID =$_SESSION['ID']; ?>
                                           <li><a href="http://localhost/hikers/auditor/auditorHis.php?userID=<?php echo''.$ID.'';?>">Messages </a></li>
                                         <li><a href="formView.php">Form view</a></li>
-                                        <li><a href="sendSurvay.php">Send survay</a></li>
-                                        <li><a href="form.php">Make a survay</a></li>
+
                                       </ul>
                                      
                                       <ul class="nav navbar-nav navbar-right">
@@ -118,7 +117,17 @@ h3, p, h1, h2, b
           <form action="" method="post">
 <?php require('../login/db.php');?>
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "hikers project";
 
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 //$gID= $_GET['groupID'];
 $q="SELECT * FROM users WHERE type='admin'";
 $result= mysqli_query($conn,$q);
