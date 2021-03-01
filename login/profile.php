@@ -36,6 +36,7 @@
 
 
   <?php
+   include("../nav-bar.php");  
 try{
    require('db.php');?>
 
@@ -107,98 +108,12 @@ $check = mysqli_fetch_array($result);
   
 
 }
+
+
+	
+	
 ?> 
            
-                <div class="row">
-                   <div class="navbar navbar-default">
-                      <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                            <div class="navlogo col-lg-2">
-                                <a class="navbar-brand" href="">HIKERS</a>
-                            </div>
-                          
-                        </div>
-
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                          
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <div class="col-lg-8">
-                                <?php  
-
-
-
-
-
-
-                                    if($check['type']=='hiker'&&$p==$_SESSION['ID'])
-{
-
-echo'
-                                      <ul class="nav navbar-nav nav-links">
-                                         
-                                      <li><a href="../groups.php">Groups</a></li>
-                                      <li><a href="../productPage.php">Shop</a></li>
-                                      <li><a href="../trips.php">Trips</a></li>
-
-                                      </ul>
-                                     
-                                      <ul class="nav navbar-nav navbar-right">
-                     
-                                      <li><a href="../cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-                                      <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
-                                      <li><a href="../myGroups.php"> My Groups</a></li>
-                                      <li><a href="../myTrips.php"> My Trips</a></li>
-                                        
-    </ul>';
-                                  }
-                                  
-                                  else if($check['type']=='admin'||$p==$_GET['prof'])
-                                  {
-                                    echo'
-                                    <ul class="nav navbar-nav nav-links">
-                                       
-                                      <li><a href="../Administrators/admins.php">Admins</a></li>
-                                      <li><a href="../Administrators/adminTrips.php">Trips</a></li>
-                                      <li><a href="../Administrators/adminUsers.php">Users</a></li>
-                                      <li><a href="../Administrators/adminGroups.php">Groups</a></li>
-                                      <li><a href="../Administrators/adminProducts.php">Products</a></li>
-                                      <li><a href="http://localhost/hikers/history.php?userID='.$_SESSION['ID'].'">Message History</a></li>
-
-                                    </ul>
-                                   
-                                    <ul class="nav navbar-nav navbar-right">
-                   
-                    <li><a href="../login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a></li> </ul>
-                   
-  </ul>';
-
-
-
-
-                                  }
-                                  
-                                  
-                                  ?>
-
-                                    </div>
-                                    
-                               
-                              
-                            </div>
-                         
-  </div>
-               </div>
-                 </div>
-             
-                
-            </div>
 			
 			
 			

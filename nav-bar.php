@@ -26,11 +26,41 @@
   opacity: 0.7;
 
 }
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: grey;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: black; color:white;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
 </head>
 <body>
 
- <section class="header">
+ <section >
             <div class="overlay">
                 <div class="row">
                    <div class="navbar navbar-default">
@@ -44,7 +74,7 @@
                             <span class="icon-bar"></span>
                           </button>
                             <div class="navlogo col-lg-2">
-                                <a class="navbar-brand" href="home.php">HIKERS</a>
+                                <a class="navbar-brand" href="http://localhost/hikers/home.php">HIKERS</a>
                             </div>
                           
                         </div>
@@ -53,59 +83,197 @@
                           
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <div class="col-lg-8">
-                                      <ul class="nav navbar-nav nav-links">
-                                        
-                                        <li><a href="http://localhost/hikers/login/profile.php?prof=0">Profile</a></li>
-                                        <li><a href="groups.php">Groups</a></li>
-                                        <li><a href="productPage.php">Shop</a></li>
-                                        <li><a href="trips.php">Trips</a></li>
-                                      </ul>
-									  
-									   <ul class="nav navbar-nav navbar-right" >
+                                     
 									   
                      <?php
                    
-				if(isset($_SESSION['ID'])) 
-				{
-          include("chaticon.php");
-          echo '  
+			
+
+require('login/db.php');
+                                
+$sql= "Select * from users WHERE ID =".$_SESSION['ID']." ";
+$result = mysqli_query($conn,$sql);
+$check = mysqli_fetch_array($result);
+
+    $ID=$_SESSION['ID'];
+                                    if($check['type']=='hiker')
+{
+     if(isset($_SESSION['ID'])) 
+                    {
+                     
+                                
+   echo '  
+
           
-                      <li><a href="login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
-                      <li><a href="myGroups.php"> My Groups</a></li>
-                      <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-                      <li><a href="myTrips.php"> My Trips</a></li>
+                    <ul class="nav navbar-nav nav-links">
+                                        
+                                        <li><a href="http://localhost/hikers/login/profile.php?prof=0">Profile</a></li>
+                                        <li><a href="http://localhost/hikers/groups.php">Groups</a></li>
+                                        <li><a href="http://localhost/hikers/productPage.php">Shop</a></li>
+                                        <li><a href="http://localhost/hikers/trips.php">Trips</a></li>
+                                      </ul>
+									  
+									   <ul class="nav navbar-nav navbar-right" >
+             
+            	<div class="dropdown">
+         <li >	    <img class="img-thumbnail rounded-circle" style=" border-radius: 50%; width: 50px; height: 50px;" src="http://localhost/hikers/layout/photos/'.$check['profilePic'].'"> '.$check['username'].' 
+         </li>
+				
+
+  <div class="dropdown-content">
+
+ <a href="http://localhost/hikers/myGroups.php"> My Groups</a>
+<a href="http://localhost/hikers/myTrips.php"> My Trips</a>
+<a href="http://localhost/hikers/cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a>
+ <a href="http://localhost/hikers/login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a>
+  </div>
+</div>
+			 
                       </ul>
+ 
+ 
+   	
                       </div>
-                    
-                  </div>
-          ';
-         
+                     </div>  
+                
 					
-				}
-				else
-				{
-				echo'       
-        <li><a href="login/registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="login/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	
+        ';} 
+                                  }
+                                  
+                                  else if($check['type']=='admin')
+                                  {
+                                    
+     if(isset($_SESSION['ID'])) 
+                    {
+                     
+                                
+   echo '  
 
-        </ul>
-        </div>
-      
-    </div>
+          
+                       <ul class="nav navbar-nav nav-links">
+             
+                                      <li><a href="http://localhost/hikers/login/profile.php?prof=0">Profile</a></li>
+                                      <li><a href="Administrators/admins.php">Admins</a></li>
+                                      <li><a href="Administrators/adminTrips.php">Trips</a></li>
+                                      <li><a href="Administrators/adminUsers.php">Users</a></li>
+                                      <li><a href="Administrators/adminGroups.php">Groups</a></li>
+                                      <li><a href="Administrators/adminProducts.php">Products</a></li>
+									  </ul>
+									    <ul class="nav navbar-nav navbar-right" >
+            	<div class="dropdown">
+         <li >	    <img class="img-thumbnail rounded-circle" style=" border-radius: 50%; width: 50px; height: 50px;" src="../layout/photos/'.$check['profilePic'].'"> '.$check['username'].' 
+         </li>
+				
 
-        
-    <div class="page-width text-center">
-    
-							
-    <br><br><br><br>
-  
-<a href="login/login.php" class="new-btn"style="background-color: transparent; color:white;" >
-JOIN US
-</a>
-    
+  <div class="dropdown-content">
+ <a href="http://localhost/hikers/login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a>
+ <li><a href="Administrators/adminProducts.php">Products</a></li>
+  <li><a href="history.php">Messages History</a></li>
 
-</div>';
-				}
+  </div>
+</div>
+			 
+                      </ul>
+ 
+ 
+   	
+                      </div>
+                     </div>  
+                
+					
+	
+        ';} 
+								  }
+ else if($check['type']=='auditor')
+                                  {
+                               
+     if(isset($_SESSION['ID'])) 
+                    {
+                     
+                                
+                                       
+   echo '  
+
+          <ul class="nav navbar-nav nav-links">
+                                         
+                                  
+                                        <li><a href="http://localhost/hikers/auditor/investigationS.php?userID='.$ID.'">Investigation Requests</a></li>
+                                        <li><a href="http://localhost/hikers/auditor/formView.php">Form view</a></li>
+										 <li><a href="http://localhost/hikers/auditor/auditorHis.php?userID= '.$ID.'">Messages </a></li>
+
+                                      </ul>
+                                     
+                                      <ul class="nav navbar-nav navbar-right">
+                     
+                   
+             
+            	<div class="dropdown">
+         <li >	    <img class="img-thumbnail rounded-circle" style=" border-radius: 50%; width: 50px; height: 50px;" src="../layout/photos/'.$check['profilePic'].'"> '.$check['username'].' 
+         </li>
+				
+
+  <div class="dropdown-content">
+ <a href="http://localhost/hikers/login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a>
+  </div>
+</div>
+			 
+                      </ul>
+ 
+ 
+   	
+                      </div>
+                     </div>  
+                
+					
+	
+        ';} 
+								  }
+
+ else if($check['type']=='HR')
+                                  
+     if(isset($_SESSION['ID'])) 
+                    {
+                     
+                                
+   echo '  
+
+                     <ul class="nav navbar-nav nav-links">
+                                         <li><a href="http://localhost/hikers/login/profile.php?prof=0">Profile</a></li>
+                                      <li><a href="http://localhost/hikers/auditor/auditorHis.php?userID='.$ID.'">Messages </a></li>
+                                        <li><a href="http://localhost/hikers/hr/investigationS.php?userID='.$ID.'>">Investigation Requests</a></li>
+                                       
+
+                                      </ul>
+									  
+									    <ul class="nav navbar-nav navbar-right">
+                   
+             
+            	<div class="dropdown">
+         <li >	    <img class="img-thumbnail rounded-circle" style=" border-radius: 50%; width: 50px; height: 50px;" src="layout/photos/'.$check['profilePic'].'"> '.$check['username'].' 
+         </li>
+				
+
+  <div class="dropdown-content">
+ <a href="http://localhost/hikers/login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a>
+
+  </div>
+</div>
+			 
+                      </ul>
+ 
+ 
+   	
+                      </div>
+                     </div>  
+                
+					
+	
+        ';} 
+
+
+                                  
+                                  
 				?>
 										
 										

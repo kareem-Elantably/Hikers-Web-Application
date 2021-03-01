@@ -1,4 +1,14 @@
-<?php session_start();?>
+<?php session_start();
+
+if(!isset($_SESSION['ID']))
+{ 
+  echo'<script>
+alert("Please login")
+window.location.href="login/login.php";
+</script>';
+} 
+
+?>
 <html>
 <head>
 <meta charset="utf-8">
@@ -20,7 +30,7 @@
 .header{
     background: none;
 background-color:grey;
-  margin-left: 200px;
+  margin-left: 50px;
 }
 div {
 
@@ -31,83 +41,14 @@ div {
 </head>
 <body class="header" style= "background-color:grey">
 
-           	<?php include("chaticon.php"); ?>
-                <div class="row" >
-                   <div class="navbar navbar-default">
-                      <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                            <div class="navlogo col-lg-2">
-                                <a class="navbar-brand" href="home.php">HIKERS</a>
-                            </div>
-                          
-                        </div>
-
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                          
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <div class="col-lg-8">
-                                      <ul class="nav navbar-nav nav-links">
-                                         
-                                        <li><a href="login/update.php">Profile</a></li>
-                                        <li><a href="groups.php">Groups</a></li>
-                                        <li><a href="productPage.php">Shop</a></li>
-                                        <li><a href="trips.php">Trips</a></li>
-                                      </ul>
-                                      <ul class="nav navbar-nav navbar-right">
-                     <?php
-                    
-                    if(isset($_SESSION['ID'])) 
-                    {
-                     
-                      echo'
-                     
-                      <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-                      <li><a href="login/logout.php"><span class="glyphicon glyphicon-user"></span> Sign out</a></li>
-                      <li><a href="myGroups.php"> My Groups</a></li>
-                      <li><a href="myTrips.php"> My Trips</a></li>
-                        ';
-                      
-                    }
-                    else
-                    {
-                    echo'       
-                    <li><a href="login/registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="login/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
-                    }
-                    ?>
-    </ul>
-                                    </div>
-                                
-                            </div>
-                         
-  </div>
-               </div>
-                 </div>
-             
-                
-          </div>
-
-
+           	<?php 
+			include("nav-bar.php");
+			
+			include("chaticon.php"); ?>
+              
 			
 
-  <?php 
-
-try{
-  require('login/db.php');
-}
-catch(exception $e){
-
-  echo'Message: an error has occured';
-  
-
-}?>
+  <?php require('login/db.php');?>
   
   <?php
   
@@ -288,7 +229,6 @@ echo'<div class="pull-left">
 			
 		
 	<?php
-  try{
 $query    = "SELECT * FROM `groups_rating` WHERE groupID='$gID'";
 $result=mysqli_query($conn,$query);
 //$check = mysqli_fetch_array($result);
@@ -325,13 +265,8 @@ $today = date("F j, Y, g:i a");
 }
   }
   else{echo'<center><h2>Be the first to rate this group</h2></center>';}
-  }}
-catch(exception $e){
+  }
 
-  echo'Message: an error has occured';
-  
-
-}
 ?>
 
 
