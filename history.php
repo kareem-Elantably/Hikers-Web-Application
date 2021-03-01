@@ -119,10 +119,10 @@ h3, p, h1, h2, b
                 
           </div>
 
-         <?php require('login/db.php');?>
+       
 <?php
-
-
+try{
+require('login/db.php');
 $q="select type from users where ID='$uID'";
 $adm=mysqli_query($conn, $q);
 $ifAdm=mysqli_fetch_array($adm);
@@ -249,6 +249,12 @@ if(isset($_POST['respond']))
       echo "Error: " . $sql . "" . mysqli_error($conn);
      }
      mysqli_close($conn);
+
+}
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
 
 }
 ?>

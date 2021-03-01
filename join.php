@@ -109,6 +109,7 @@
 <div class="row">
 <form action="" method="post">
 <?php
+try{
 require('login/db.php');
 
 $gID= $_GET['groupID'];
@@ -200,6 +201,13 @@ if(isset($check))
 echo'
 <p><button class="new-btn" name="groupID" value="'.$gID.'">Rating</button></p>
 ';
+
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
 ?>
 </form>
 </div>

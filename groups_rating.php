@@ -97,7 +97,17 @@ div {
 
 			
 
-  <?php require('login/db.php');?>
+  <?php 
+
+try{
+  require('login/db.php');
+}
+catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}?>
   
   <?php
   
@@ -278,6 +288,7 @@ echo'<div class="pull-left">
 			
 		
 	<?php
+  try{
 $query    = "SELECT * FROM `groups_rating` WHERE groupID='$gID'";
 $result=mysqli_query($conn,$query);
 //$check = mysqli_fetch_array($result);
@@ -314,8 +325,13 @@ $today = date("F j, Y, g:i a");
 }
   }
   else{echo'<center><h2>Be the first to rate this group</h2></center>';}
-  }
+  }}
+catch(exception $e){
 
+  echo'Message: an error has occured';
+  
+
+}
 ?>
 
 

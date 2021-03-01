@@ -131,22 +131,8 @@
             </div>
 			
 
-<?php require('login/db.php');?>
-<?php
- 
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "hikers project";
-  
-  
-  $conn = new mysqli($servername, $username, $password, $dbname);
 
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
- // include 'nav-bar.php'
-  ?>
+
 	
 		
 <form class="form-inline md-form mr-auto mb-4" method="GET" action="" >
@@ -162,7 +148,9 @@
 <form action="buyProduct.php" method="get">
 
  <?php
-  
+
+ try{
+  require('login/db.php');
  
   
 
@@ -242,7 +230,12 @@ if(!$result){
   else {
       echo "<center><h2>No products yet</h2></center>";
   }
+  }catch(exception $e){
+
+  echo'Message: an error has occured';
   
+
+}
   
   ?>  </div>
 

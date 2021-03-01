@@ -97,7 +97,11 @@
 <div class="row">
   <div class="col-25">
     <div class="container">
-    <?php require('login/db.php');?>
+
+
+    <?php
+try{
+     require('login/db.php');?>
   <?php
 $P_SUM=0;
 
@@ -136,15 +140,28 @@ $cartSum = mysqli_query($conn,"SELECT sum(sum) as summ from cart where userID='"
       <p>Total <span class="price" style="color:black"><b>'.$P_SUM .' LE</b></span></p>
     
   ';
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
   ?>
 
 <?php
+try{
 if(isset($_POST['order']))
 $sql="insert into address (userID,fullname,email,phone,city,address,street,building,floor)values('".$_SESSION['ID']."','".$_POST['fullname']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['city']."','".$_POST['address']."','".$_POST['street']."','".$_POST['building']."','".$_POST['floor']."');";
 $query= mysqli_query($conn,$sql);
 {
 
 
+
+}
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
 
 }
 ?>

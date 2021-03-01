@@ -146,6 +146,7 @@ background-color:grey;}
 					
 
  <?php
+ try{
 
    require('login/db.php');
 
@@ -199,7 +200,12 @@ background-color:grey;}
   else {
       echo "0 results";
   }
+  }catch(exception $e){
+
+  echo'Message: an error has occured';
   
+
+}
   ?>			 
 						 
 					</div>
@@ -226,7 +232,7 @@ background-color:grey;}
 			
  <?php
 
-  
+  try{
 
   $sql = "Select * from groups";
   $result = $conn->query($sql);
@@ -249,7 +255,7 @@ background-color:grey;}
 				
 					<div class="col-lg-4 col-sm-4 col-md-6 isotopeSelector art">
 						<div class="portfolio-box zoom-effect">
-							<img src="layout/photos/'.$row['imgName'].'" class="img-responsive" alt="" style="width:100%; height:100%; object-fit:cover;" >
+							<img src="layout/photos/'.$row['imgName'].'" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-name">
@@ -275,7 +281,12 @@ background-color:grey;}
   else {
       echo "0 results";
   }
-			//$conn->close();
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}			$conn->close();
   ?></div> 
 		</section>
 		

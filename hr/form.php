@@ -271,8 +271,11 @@
 </div>
 </div>
 </form>
-<?php require('../login/db.php');?>
 <?php 
+try{
+ require('../login/db.php');
+
+
 $conn=mysqli_connect("localhost","root","","hikers project");
 $db=mysqli_select_db($conn,'surveytable');
 
@@ -299,6 +302,12 @@ if(isset($_POST['submit']))
     else{
         echo '<script type="text/javascript"> alert("data not saved")</script>';
     }
+
+}
+}catch(exception $e){
+
+  echo'Message: an error has occured';
+  
 
 }
 ?>

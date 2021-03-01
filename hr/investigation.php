@@ -112,8 +112,10 @@ h3, p, h1, h2, b
 	
 
           <form action="" method="post">
-<?php require('../login/db.php');?>
+
 <?php
+try{
+ require('../login/db.php');
 
 //$gID= $_GET['groupID'];
 $sql="select * from investigation where approval='0' ORDER BY ID DESC ";
@@ -195,7 +197,12 @@ else {echo"<center><h2>There are no problems to investigate</h2></center>";}
         
 
             
-   
+   }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
 ?>
 
 </table>

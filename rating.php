@@ -121,11 +121,12 @@ div {
   </div>
 
  
- <?php require('login/db.php');?>
+
    
   
   <?php
-
+  try{
+  require('login/db.php');
 if(isset($_GET['productID']))
   {
     $pID= $_GET['productID'];
@@ -251,7 +252,14 @@ echo'<div class="pull-left">
 				
 				
 					</div>			
-		</div></div></div>';?>
+		</div></div></div>';
+
+  }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}?>
 			
 <br><br><br>
 
@@ -305,7 +313,7 @@ echo'<div class="pull-left">
 		
 	
 <?php
- 	
+ 	try{
 $query    = "SELECT * FROM `rating_system` WHERE productID='$pID'";
 $result=mysqli_query($conn,$query);
 //$check = mysqli_fetch_array($result);
@@ -343,7 +351,12 @@ $today = date('Y-d-m H:i:s');
   else{echo'<center><h2>Be the first to rate this item</h2></center>';}
   }
 
+}catch(exception $e){
 
+  echo'Message: an error has occured';
+  
+
+}
 ?>
 
 
@@ -358,7 +371,7 @@ $today = date('Y-d-m H:i:s');
   <?php
 
 
-
+try{
 
      if($_POST)
 {
@@ -411,6 +424,12 @@ $today = date('Y-d-m H:i:s');
              
               else{echo'<script>alert("NOT WORKING")</script>';}
             }
+          }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
 ?> 
 
 <section>

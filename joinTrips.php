@@ -109,10 +109,10 @@
 <div class="row">
 
 <form action="" method="post">
-<?php require('login/db.php');?>
+
 <?php
-
-
+try{
+require('login/db.php');
 $tID= $_GET['tripID'];
 
 
@@ -182,6 +182,12 @@ if(isset($check))
      window.location.href="login/login.php";
      </script>';
                 }
+              }catch(exception $e){
+
+  echo'Message: an error has occured';
+  
+
+}
 ?>
 </form>
 <p><input type="button" class="new-btn" onclick="window.location.href='trips.php'" value="Trips" /></p>
